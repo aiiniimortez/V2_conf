@@ -1,0 +1,3785 @@
+{
+    "mixed-port": 7890,
+    "ipv6": true,
+    "allow-lan": true,
+    "mode": "rule",
+    "log-level": "warning",
+    "disable-keep-alive": false,
+    "keep-alive-idle": 10,
+    "keep-alive-interval": 15,
+    "unified-delay": false,
+    "geo-auto-update": true,
+    "geo-update-interval": 168,
+    "external-controller": "127.0.0.1:9090",
+    "external-ui-url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+    "external-ui": "ui",
+    "external-controller-cors": {
+        "allow-origins": [
+            "*"
+        ],
+        "allow-private-network": true
+    },
+    "profile": {
+        "store-selected": true,
+        "store-fake-ip": true
+    },
+    "dns": {
+        "enable": true,
+        "listen": "0.0.0.0:1053",
+        "ipv6": false,
+        "respect-rules": true,
+        "use-system-hosts": false,
+        "nameserver": [
+            "1.1.1.1#\u2705 Selector",
+            "1.0.0.1#\u2705 Selector"
+        ],
+        "proxy-server-nameserver": [
+            "8.8.8.8#DIRECT"
+        ],
+        "nameserver-policy": {
+            "raw.githubusercontent.com": "8.8.8.8#DIRECT",
+            "time.apple.com": "8.8.8.8#DIRECT"
+        }
+    },
+    "tun": {
+        "enable": true,
+        "stack": "mixed",
+        "auto-route": true,
+        "strict-route": true,
+        "auto-detect-interface": true,
+        "dns-hijack": [
+            "any:53",
+            "tcp://any:53"
+        ],
+        "mtu": 9000
+    },
+    "sniffer": {
+        "enable": true,
+        "force-dns-mapping": true,
+        "parse-pure-ip": true,
+        "override-destination": false,
+        "sniff": {
+            "HTTP": {
+                "ports": [
+                    80,
+                    8080,
+                    8880,
+                    2052,
+                    2082,
+                    2086,
+                    2095
+                ]
+            },
+            "TLS": {
+                "ports": [
+                    443,
+                    8443,
+                    2053,
+                    2083,
+                    2087,
+                    2096
+                ]
+            }
+        }
+    },
+    "proxies": [
+        {
+            "name": "wg-0",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.108.92.84",
+            "port": 123,
+            "public-key": "Sb5VSMZhhqSo5absckjzPn9HWhT7UrKk1AQv0me0zhI=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-1",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "116.90.72.244",
+            "port": 123,
+            "public-key": "d6yLPOu47tkYjm3Q2+R/oHvj2lgxLGL/sOrLFlkGLX0=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-2",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "109.201.130.3",
+            "port": 123,
+            "public-key": "B8Oyz2mKiUvv3iMiKt7/rhLccCB3KcAYnCj5+fO4hHM=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-3",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.156.172.164",
+            "port": 123,
+            "public-key": "90fjr1sq0Hgv2l+DgMaaGQ009SDw7VxmzJwaYmclaFs=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-4",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "72.11.157.68",
+            "port": 123,
+            "public-key": "b5fIKEXhihCI7f4NOkQO/2BOd+bYHa0c05OylImgB0E=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-5",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "195.181.172.147",
+            "port": 123,
+            "public-key": "y+Kvlfz0z8DF17hVvEezMml3SH3OaB2l5l09DPdQNCk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-6",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.191.205.140",
+            "port": 123,
+            "public-key": "3L8yhe+v7TzBeesOFxSdU2VUa8FG4PTuoiiUoV7DAGY=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-7",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "195.146.4.189",
+            "port": 123,
+            "public-key": "cmaT8JIehfRf5PWWDkcBRwLWDb3jrIkk/SDbw4JmUAc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-8",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.226.64.35",
+            "port": 123,
+            "public-key": "3si2nD1DKbbkeZkdg3hLMfOYw1gdKbVFtTOj2NOA+nM=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-9",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "104.223.95.100",
+            "port": 123,
+            "public-key": "Jhhq6jvPxABM8OmzaM4/zJbcoRBR5OZalIHrZaFuXAU=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-10",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "198.12.76.212",
+            "port": 123,
+            "public-key": "dqRF96aFvKwZ/UZXC+VuIciE6e2Iy138Vx54D2iHug8=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-11",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.108.94.164",
+            "port": 123,
+            "public-key": "iZMzm2yjt8zU5xgsiw0TyRUbIXHsO1pZ6VrMvkRG3ng=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-12",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.62.49.114",
+            "port": 123,
+            "public-key": "D2Tx/zEgTy2uoH2HLp5EBIFyLkHGEhkhLMYYedpcUFw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-13",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "62.212.239.220",
+            "port": 123,
+            "public-key": "oZSSjyLgPsssnrWYUZYiU5x1wF4wuuENQUoY5S4oeHc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-14",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "202.129.16.149",
+            "port": 123,
+            "public-key": "V95mJcGcpBFRAy3rQQJc6pWe5VA/28YoWKTl53slzz4=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-15",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.253.99.132",
+            "port": 123,
+            "public-key": "ZXYlnCS0zJGhpsYDhCxs8pYXsB00yqxhagTBjRD002U=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-16",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "141.98.103.20",
+            "port": 123,
+            "public-key": "a599bjD8WzXg94xH1DfGBxW8yJ64EXMZq18elEfAwyk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-17",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "104.255.169.111",
+            "port": 123,
+            "public-key": "dAaOzl6DBAuFWC85UJUY378WwEHUoNqbE5lJMDfNamo=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-18",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "138.186.141.156",
+            "port": 123,
+            "public-key": "TkdCh95ZjvjxoQGs85jAC9pV+TgLzdOYlZsUF4b/liU=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-19",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "199.217.104.228",
+            "port": 123,
+            "public-key": "nwpvJ7AtDjk77dpyL7qKkvwsWQL82Fqy3JEk/KR/iGw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-20",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.245.85.100",
+            "port": 123,
+            "public-key": "8ZGAQUv1E/9pfVmPwasDo4g69PlAHIzlUf5pAmCJ7hk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-21",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.62.50.209",
+            "port": 123,
+            "public-key": "ua7TUXkcSiiHeTyCok5b3PX9DkJ4l5yVvGlSmJ34WU8=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-22",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.108.95.228",
+            "port": 123,
+            "public-key": "hcn+JR0QAhhUVVRND5Djq35caGmBEGlcp4MX/xlm6HE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-23",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.232.21.132",
+            "port": 123,
+            "public-key": "v8yTgxOMZjdZkCUoBVMUOiDBYgaNzQ9OfXc+uz2GUDc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-24",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "146.70.97.180",
+            "port": 123,
+            "public-key": "CfcxKJFjdKn/idQ/QadOCGHLpcLOLDXr0H+AtA1EqUg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-25",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.252.223.228",
+            "port": 123,
+            "public-key": "gLPWBcPANL0mgwEkImb6PUJmR2ncz7S9DKIDDYvgJkk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-26",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "190.103.176.148",
+            "port": 123,
+            "public-key": "Yom91OWyt0otz1S4hgQMhp1q1y8tpDvUWwVkNXpmpjc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-27",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "104.168.34.148",
+            "port": 123,
+            "public-key": "6GllLFSyxxwlqV9Yd9xij83CYgfGvfQGgN6SNh9h0xM=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-28",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "89.252.132.20",
+            "port": 123,
+            "public-key": "DBXvFCQL1KxJkVfJGiFzAru/1ClQi54EV1GHgoyIsWY=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-29",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "116.206.229.132",
+            "port": 123,
+            "public-key": "/oz2frQv99JveBgmTXW22QXIEulQURK79BW+ugk8fCE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-30",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "192.158.226.16",
+            "port": 123,
+            "public-key": "md4drvl8I1VnIAIfUnvEQYd8QRUVk7NC3gLE2+Eu20M=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-31",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "208.77.22.101",
+            "port": 123,
+            "public-key": "bfeZeTGkISX5GVgVOkTMRlqvWlTI8obCb7vVdy8XGWk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-32",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "23.226.141.196",
+            "port": 123,
+            "public-key": "c88CXfzJqasp/RIf7hQyYjrakrSyI4zfZdcTmcTwwxQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-33",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "23.19.122.226",
+            "port": 123,
+            "public-key": "6oMHpHHL3pq6Pdr2HoDRYuyjcyQGxfQaSRQR+HPyvgc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-34",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "178.175.134.188",
+            "port": 123,
+            "public-key": "el0He87GLmmywBmn7ErEiuKd5Bjc6Q4zWciL86rYcxw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-35",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "38.101.74.20",
+            "port": 123,
+            "public-key": "89DUtbYYyXcAktaB2cnCVA/YiZQEddYHuOz2K0vBAn4=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-36",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.206.224.36",
+            "port": 123,
+            "public-key": "mRksyUF7wDK/8uBoPoEujp+yoUhjhq0N2LnNJFJnmiE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-37",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "172.241.131.130",
+            "port": 123,
+            "public-key": "mPzcl2obsDyjjBl4tExF+gSle0jEhv9bHRZEi8D0PQA=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-38",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "23.95.42.212",
+            "port": 123,
+            "public-key": "RVOTg3bu/bDnGE9YYpYv17KejYjGt7/38LeIQW4aLEU=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-39",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "192.161.188.196",
+            "port": 123,
+            "public-key": "rtk1/cMCEyJw9xgs6v0ef0rsk2bwi+sI/zgbo+gLkko=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-40",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "198.54.128.197",
+            "port": 123,
+            "public-key": "lHYaK5YoHyzvXYUKDbSd6BExb9BSkFfQsYsAn8drbCg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-41",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "199.115.96.84",
+            "port": 123,
+            "public-key": "KEVlEKE4qS5w7sJQ7DY3TgqwAgT/47vbZxazkC/F2EQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-42",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "104.244.210.244",
+            "port": 123,
+            "public-key": "ePfazP+V1DkyyzK2VpSKS1JFiChU2TpO6jyYOmjnRAw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-43",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "45.9.249.44",
+            "port": 123,
+            "public-key": "sv9o+LudivUcZh3f92hEFFu5KGCT/2QISYy3OpPC0h0=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-44",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "5.157.13.148",
+            "port": 123,
+            "public-key": "tJa6iPx6mpOktn5KoalMslWcpg6pRUdVx3bKDi3wtDg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-45",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.24.232.147",
+            "port": 123,
+            "public-key": "LxvdxRlnn73teVay3m0wY8tP1131yCbfnCAftD+p7VE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-46",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "193.36.118.244",
+            "port": 123,
+            "public-key": "9J0kA4c4i7N/+6B+3j0zFkDTHocZNsw6eK6+sLZ1qCQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-47",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "89.249.65.20",
+            "port": 123,
+            "public-key": "kDDue7viLOXcxayH/VWzI8EhqeeSHrwOSt3IF9rHIlI=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-48",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "195.181.170.67",
+            "port": 123,
+            "public-key": "E2MkaH7nxlerMCZsZu/KTJOTb5Typp9A2DuOqzbdvTM=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-49",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "23.191.80.4",
+            "port": 123,
+            "public-key": "P5X43E/SgvnJtbrKnJwLFxqFoZGsCghW2SxlXvfdzm0=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-50",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.9.79.187",
+            "port": 123,
+            "public-key": "HENIT1CTAKjPrhG4s64jPJSzEjtEZPRARxA3amm49WU=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-51",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "196.244.192.52",
+            "port": 123,
+            "public-key": "PE9KAfm60yg/rr247eAsZb+gVJxrN4NeQLT6sIdYyDc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-52",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.112.82.228",
+            "port": 123,
+            "public-key": "jCi1I5HBTtwCblBbMzOFmOOFNG1GilYOZgst0kyq9gY=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-53",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "84.17.57.115",
+            "port": 123,
+            "public-key": "eSxX+L8qX+1MdmwjtlZGIDbDivFdURBh5Rm1KfUpYzc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-54",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.10.197.100",
+            "port": 123,
+            "public-key": "dAAkV3G3YFurH3+3198clav9vlh4FxB1asqNc0tLeCk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-55",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "46.45.136.100",
+            "port": 123,
+            "public-key": "FoZuoiJqIy/0h7Jv+7Jli4E49KFv0riLg1eVaI7j6X8=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-56",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "89.252.132.36",
+            "port": 123,
+            "public-key": "3UBRUZsTinXo+7RNpduBmxObJkeeSvQjb7sX1ydvvSw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-57",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.236.201.77",
+            "port": 123,
+            "public-key": "Jntc7e8Zxk9vNvq2dbOOwyoXsB9nybUMF1LRdCZZgWk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-58",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "202.74.239.12",
+            "port": 123,
+            "public-key": "KQeAizSUze/+JGq9IuRGMxMT1ry+vYYvdFqXbVTGyV0=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-59",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "197.242.159.229",
+            "port": 123,
+            "public-key": "/8WvGXPoWTiPmrQsmakiEk7wFhn0ab7FWqN5k13oszQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-60",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "165.73.248.92",
+            "port": 123,
+            "public-key": "X6LjCVZ41wLoSbWWZpFET+Ejw0VsGuvJ5utU/l3rKl4=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-61",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "169.255.58.178",
+            "port": 123,
+            "public-key": "8n68GM7n6dm6Hj3RIIh5q1q6Un52Cq82LYEXHRAtPg4=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-62",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "38.146.5.52",
+            "port": 123,
+            "public-key": "U5s7Yy/2fCqlaFcI96dFKupqEVCn+BYF04LRLD1zOhg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-63",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "202.176.4.182",
+            "port": 123,
+            "public-key": "pKXBuReWe+HfrILovyFzIybA8AVAsFgfDUyo42tLT1g=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-64",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "37.19.218.3",
+            "port": 123,
+            "public-key": "vwimooPysZvNdJULeFQVovYfqhsLG5gVdzgoTnfm+iE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-65",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "82.102.31.36",
+            "port": 123,
+            "public-key": "hHmf2yS/Hjkh6ZJ4seoO5Vwv0LwNlYFTnUK3v9lGvEQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-66",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "190.120.229.140",
+            "port": 123,
+            "public-key": "ig1yNm9ck4lesT3MShd4JN7ngvLLDMR+l7Euc88oLzQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-67",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "94.46.13.216",
+            "port": 123,
+            "public-key": "DUUQLXeyl2nC4PCBQ07YsQOStFzr3P2BooWkNu318SA=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-68",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.212.168.134",
+            "port": 123,
+            "public-key": "YxWQDjNmU41PJXtoobFek3Y6nhICSLgsqH+QKPO5AQ8=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-69",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "212.102.63.94",
+            "port": 123,
+            "public-key": "KtJIKy9zsCXtKwFMQeGDEZVXtqw+X1+5z10Rh84/N0s=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-70",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "192.3.20.52",
+            "port": 123,
+            "public-key": "TPJ0lv9z95UaBKA64lQYcpAsoYmmMxvX4cnMh3nHqgs=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-71",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.236.200.36",
+            "port": 123,
+            "public-key": "0CUpqMsVggxsjvdZewCsBFsw84goCitq0G9nytQhpDw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-72",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "172.241.214.203",
+            "port": 123,
+            "public-key": "4RW2y35hBMICisW6aAEnR4ksT7rjOEmFx2+7pjqKuiA=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-73",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "89.187.185.35",
+            "port": 123,
+            "public-key": "aZkVfQ47eZjQXlFXaXR/joai25TTXOH0jk8JU4S+718=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-74",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "104.129.3.68",
+            "port": 123,
+            "public-key": "MYoOwWssF5fWZ+bOQINzfitdjwyqiHcJhr607wSAzEY=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-75",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.221.132.228",
+            "port": 123,
+            "public-key": "uZxQR1klZ1Ere9kA8Thp7CUgAlviSWXdYjagsNdunjM=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-76",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "89.238.178.44",
+            "port": 123,
+            "public-key": "aTyGd+x2cPxFdPzi7FfbKc7SG4Rc5VE0c/Tdyd2MdzA=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-77",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "89.44.201.100",
+            "port": 123,
+            "public-key": "uFOg97vQhHVCUfZy/HwmGH+dR6/9lpeWZ5tV3PysHRE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-78",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "141.98.215.228",
+            "port": 123,
+            "public-key": "R0DcCsuFG3sgugDVRnt6vy28z+AP9r1ygYIw0pJApGs=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-79",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "116.206.228.180",
+            "port": 123,
+            "public-key": "3+ehrqWHaqA4lC10BRkscYasaewB2eamMSRda+HSkxQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-80",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "45.121.209.161",
+            "port": 123,
+            "public-key": "G7LkwWk08Ase/Wi9mnOW77brNBC0vTCemvy1IW1nlV4=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-81",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "190.103.179.212",
+            "port": 123,
+            "public-key": "IdglMouv0zOaeA+oNqoN5Gk2I8h4zWlmRxH5qwDFBUI=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-82",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "23.82.137.73",
+            "port": 123,
+            "public-key": "SZAf6bGig5dmm+dihnqRQMOEr27FK9NG8Vklmj3IQ0o=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-83",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "173.44.36.68",
+            "port": 123,
+            "public-key": "tEh6Z8bnFmQU2KWHWYOS7yuDFZgwn3LGOZAdR1hN8kU=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-84",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "194.5.215.196",
+            "port": 123,
+            "public-key": "oIt9F8IfWqCvSQACrDcmfLPFrhn+RtG+Mr9/sd4VSSU=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-85",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "84.17.59.67",
+            "port": 123,
+            "public-key": "QpdeoH7VxAatKlFm0sPo8phHjv1tiiHdqQaACmzMJjE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-86",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "37.120.135.84",
+            "port": 123,
+            "public-key": "sIJCZv0xijjMES3AqTrF374YOcdaIS266MBj1Yt7Ng0=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-87",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "144.168.163.194",
+            "port": 123,
+            "public-key": "5yBJlSpfxd8Hq4+X4ZD60MYc6tosaMh5inQwA18XCCk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-88",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "172.98.68.148",
+            "port": 123,
+            "public-key": "87RdB427Hxehe3ePG8mSpPBsdwGgKWwAkEtbleThckw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-89",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "95.143.177.99",
+            "port": 123,
+            "public-key": "KvFr7Te5+RaFATDKJzrNXKf44ws8J6E9WbNVsMPvY1I=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-90",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "45.138.86.228",
+            "port": 123,
+            "public-key": "iY4MhQqQTP4uT7U4w9DfUEVxi5I3HJvjZcIL2dwmtTw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-91",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "173.205.85.164",
+            "port": 123,
+            "public-key": "TA+nBx5qMBdyIiug4SHgbw30/GXrRZ2aUAH7MQHJwzc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-92",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "212.103.48.68",
+            "port": 123,
+            "public-key": "eIYiubmBdTz6WEopGNvlou37zzJ4/wD0LgsQudpiAgA=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-93",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "206.217.129.228",
+            "port": 123,
+            "public-key": "ENe619amvJuPmyAtuLnGziKl1Yr1n3SoXgHrmosbRhk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-94",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "89.187.177.51",
+            "port": 123,
+            "public-key": "cwzVI0WaEnJHhkSzrRdStijZSjVL/fd/jWNxShL0fTo=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-95",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "23.81.64.130",
+            "port": 123,
+            "public-key": "2+O8VAshLkyWM1b6Ye2Cuoa3R/guKZgQ+YLoCsseWCU=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-96",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "46.199.75.107",
+            "port": 123,
+            "public-key": "z77o+FZ5AcTxTvkNyjLv69ZqaQtzFoS6UdtTK1eyoE8=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-97",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "198.147.22.227",
+            "port": 123,
+            "public-key": "ST6xQmd7dcCl8HuR7jBRpAEyc2IOgpVE605uPTIycQg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-98",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.206.225.132",
+            "port": 123,
+            "public-key": "MhJ+u6X13d3beo3DMIANYDsvnZjIqYEpQDGlMUS5fis=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-99",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "138.186.142.204",
+            "port": 123,
+            "public-key": "FUPy5mxwpV0z7j5d1Pqb37wHcyuqcCKSRDTBu/8kezc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-100",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "84.17.42.35",
+            "port": 123,
+            "public-key": "6O1bKP+apj/JT/aV++aODc1+EHlPO+c0xGyfKXE+k14=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-101",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "45.89.174.36",
+            "port": 123,
+            "public-key": "qt+nrPNqLaB7dNOKD3JWvkG4JbgZgKfHZv7t0818LTg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-102",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.77.234.212",
+            "port": 123,
+            "public-key": "5LYbbr320XMoXPrLsZex+2cDAMUOnzX5Htpcgb4Uc1c=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-103",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "45.121.208.161",
+            "port": 123,
+            "public-key": "HHDA7gntK+JWWxilBUsDI1FMgeGZtVFKKhbWVIbwMC0=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-104",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "76.72.175.164",
+            "port": 123,
+            "public-key": "Ptieqs4YovU0Jxgu9d7rSTapQPp7G+8GYWiwaf8jPlA=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-105",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "23.172.112.228",
+            "port": 123,
+            "public-key": "c9QHUQhVUNIYqcp5HQ4gwoSoKzAgK8uSsoiJUrlriDA=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-106",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "195.80.149.244",
+            "port": 123,
+            "public-key": "QgQ3dPssF5IGZczLNP1KKbkohpIu/GCYBdi6ecuoqwU=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-107",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "23.83.184.129",
+            "port": 123,
+            "public-key": "OhfZprfgCdrELOzmZyXaVa35AssZyYkzNiAeulqIXis=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-108",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.156.174.12",
+            "port": 123,
+            "public-key": "47tLjymDPpTIBerb+wn02/XNFABF4YDAGwOnijSoZmQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-109",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.246.210.3",
+            "port": 123,
+            "public-key": "pASG4FD9LwOfJukT/wYbUF10gD6v8DVuv5hrNbiOnHQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-110",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "107.187.124.4",
+            "port": 123,
+            "public-key": "c31sdkhmVsucRVa6nSNNSiZ2UHHLdUhq5gvfdJxSnFw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-111",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "200.107.206.132",
+            "port": 123,
+            "public-key": "xS6I4AqciTxU4Aox8HiudDs44kpHEuWe+BDc6ifO610=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-112",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "82.221.139.39",
+            "port": 123,
+            "public-key": "IMHoX/bhNghQVQB0pYKi14pwJhkOcLevpiMa7Khaz2I=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-113",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.165.170.3",
+            "port": 123,
+            "public-key": "TKpGTxyjCr7+CiVhaYulaLZ7pnXEsg4135ZIlz99qwc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-114",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "217.199.121.188",
+            "port": 123,
+            "public-key": "VgzE+XeQUxX54wMZdhRBU4Qxqba95iVpXi197ZbBBgA=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-115",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "87.101.94.196",
+            "port": 123,
+            "public-key": "7V00BhJ4cAxsJmU8mEXbdUU5wljw67fGKs1oDhUYtl8=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-116",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "188.124.42.100",
+            "port": 123,
+            "public-key": "EN0anJ12SaB6+aNVh1iRNQ9wEqMlwXTDv4OzAGhm1zw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-117",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "94.242.50.175",
+            "port": 123,
+            "public-key": "bGn6yuCFQWWF8+ZMGlJ0M6+IJRlkLXn0/UI/mvIyYwQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-118",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "172.255.125.161",
+            "port": 123,
+            "public-key": "e1kA4Tn1REdBHHo3BZsApwhCybD+VpGQ9FoUxUq4mzY=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-119",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "66.115.165.228",
+            "port": 123,
+            "public-key": "QgKUjSTh1LGfLqcM1UAzIjTIviacHG+auN3PEXRhZkM=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-120",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "167.88.60.228",
+            "port": 123,
+            "public-key": "1J3f00cdpBeDNBQmfjzUxN/y/x0KyQSZVubCHubokj4=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-121",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "66.203.113.137",
+            "port": 123,
+            "public-key": "w262TI0UyIg9pFunMiekVURYUuT/z4qXRor2Z7VcOn4=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-122",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "177.67.80.60",
+            "port": 123,
+            "public-key": "SxBT11IISNRou7thGo5A1QtaMjfzPIzZXDxdYEbDxhE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-123",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "177.54.157.180",
+            "port": 123,
+            "public-key": "2LiGGjfWP64d7uVNpgV8n/lIg2iM62iz8ZXRHFd1Qw0=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-124",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.99.3.25",
+            "port": 123,
+            "public-key": "Z3Nfo50Hl0+A96/RXWGV2HPl5rJGsk2unuD1accZPWQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-125",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "104.129.56.132",
+            "port": 123,
+            "public-key": "zi62xnrtbvAbaavB8MLoTF36BX/stxjfnGJ6mIsZYzg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-126",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "198.12.116.196",
+            "port": 123,
+            "public-key": "wfSHdnVIT/SlLwKCz+QWTs0ZIPRtYd2NKpMXDPe7sWk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-127",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "64.120.2.175",
+            "port": 123,
+            "public-key": "pLzFr9exM2Z5oXw0iuKnXIJZxa4I0UEmyFC85sHtDwk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-128",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "218.232.76.180",
+            "port": 123,
+            "public-key": "PERLcFu5JMk3Cdt4sb45epMLasXqa0+PqRseBKMYMEc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-129",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "45.133.194.212",
+            "port": 123,
+            "public-key": "jJUwb5Ekpn3w4fqZiCjO6GDRQ882AeiLjvDx5tYOfTw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-130",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.64.104.114",
+            "port": 123,
+            "public-key": "wYAVV6Ngtcnm1DqQptFCi69gcS1v2mvpM27iRb+XWko=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-131",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "146.70.29.180",
+            "port": 123,
+            "public-key": "g4dIl4jA8VB8aUNWW3EgABrge+TnaAwHxM7flakbZH8=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-132",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "156.146.56.99",
+            "port": 123,
+            "public-key": "Nh5LEJT44xbuvTQnv3OZ0bXi09BFXV4SBB1XVMI12Ec=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-133",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.62.48.225",
+            "port": 123,
+            "public-key": "stPvzj5yM1z5Qg9H3gMvAKNPJLU0X3SeUSJPg3wqDR8=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-134",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.225.28.52",
+            "port": 123,
+            "public-key": "pS/8DkpghU/W12/7xxO/+NMHG0zR0M3nMzeFGLui2Xs=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-135",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.94.192.36",
+            "port": 123,
+            "public-key": "0VAbqR6QprUwYMbgo1Xuel23UzzibC7OIxDJYAe3wx4=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-136",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "38.67.247.68",
+            "port": 123,
+            "public-key": "7r3RICLhFxj54Udb9heUGeBoI814UAuaUJwc65IbMnw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-137",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "79.142.76.199",
+            "port": 123,
+            "public-key": "xd+b0SNB38ILyN8mfY3d7w7zLggbq4CkkxqPavP2OUk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-138",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "195.181.166.130",
+            "port": 123,
+            "public-key": "2tyuu2HcOljr/wndoswy2Vk9gqXgjaP/IRg3vXoqFig=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-139",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "31.13.191.68",
+            "port": 123,
+            "public-key": "XF69enunWI6bbHHwgRbE/jAvuM6plb4kyGcObYKvLVc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-140",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.1.212.244",
+            "port": 123,
+            "public-key": "ZrLVHs2FNXanFBtymCd64gZNNixH7k2K5F9+O+xpt0o=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-141",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "103.77.232.76",
+            "port": 123,
+            "public-key": "olUvyUS7X592mAkw3tV1g4drB4XyNl7422F5zo6pd0o=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-142",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.189.161.51",
+            "port": 123,
+            "public-key": "yrmgyxaJAxTEth7Gc8lXOQVHn9Gn/fzd4cLE+0WZjFI=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-143",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "196.196.216.196",
+            "port": 123,
+            "public-key": "895TAMNSeQymq8Qr6dxHh9FdRfNweZt5GdDDMB0s5XE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-144",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "195.54.178.39",
+            "port": 123,
+            "public-key": "EOprktmhNg2NV9HqyHTs+uLNnTwpVnXe1/wBIFesQTE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-145",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.191.205.148",
+            "port": 123,
+            "public-key": "fvmyuUJF8JvjzIts5bROwwZQ0zkSB7lk/q8E4G3+F20=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-146",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "31.171.152.180",
+            "port": 123,
+            "public-key": "sgBIEKuocQBegrbXRmTVl6QvbhdXj2MQlIrhfEMf3RQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-147",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "193.148.16.244",
+            "port": 123,
+            "public-key": "7CGKj3gnMrJ73Q3TX/YPtk94ZqX+H3kfBbMwfhze/Hg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-148",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "138.199.22.163",
+            "port": 123,
+            "public-key": "99Kk/D1AJ2R1Tjtcvv2JaiKrBU0Jp2z9543lX1bSfUE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-149",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "149.57.28.98",
+            "port": 123,
+            "public-key": "7fY/cxF/ikCcnTyL9JgNuc3pis+YIjPBKB2TRVbzmwA=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-150",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "104.254.92.12",
+            "port": 123,
+            "public-key": "BzMLell5uUM/d9aNGaGMog+GFH36s4dFO0WuQ6/VxCg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-151",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "149.57.28.226",
+            "port": 123,
+            "public-key": "3AuxTNwzilEtwUvEd71zqbjjBuGD/XcnOEPnVLn2gWQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-152",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "71.19.251.153",
+            "port": 123,
+            "public-key": "oeqDhAeoxw1g/6cKq/fo4ubgssbwhO3K2Nkmn6JVhg8=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-153",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "104.218.61.2",
+            "port": 123,
+            "public-key": "J2Cy7FP1gYxd3TDaw4xialgPusIxQUfXUYWzqhv/KWI=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-154",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "208.78.41.132",
+            "port": 123,
+            "public-key": "r5BDU0T+VGZU6I+zuF3vlGrdORtgNvLhY08gQxrFRCw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-155",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "89.187.168.67",
+            "port": 123,
+            "public-key": "sDDXsvjyVqpB8fecUsjX0/Y8YdZye+oiV1Dy9BfUkwE=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-156",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "146.70.81.148",
+            "port": 123,
+            "public-key": "7ENBA/g5BS80C5Y8zoyk9tOMe/MOkvfKztDjzDgjgVc=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-157",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "37.156.216.148",
+            "port": 123,
+            "public-key": "makkxzTeghSw9LGaFifz0C251aBeDCKhMmtJ8p0E6Uw=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-158",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "5.133.11.117",
+            "port": 123,
+            "public-key": "7LiZu9B4qzVwl3jKRVs7ivx/BHi/jnSS/GWSuxEClgk=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-159",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "185.244.214.36",
+            "port": 123,
+            "public-key": "1S9LgDyVSo2X34ZG8ukQQ7vqL5RpmXszNe0SYNjiUws=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-160",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "84.17.55.99",
+            "port": 123,
+            "public-key": "abAIyZlBkims+My2pZVgkY2Z83JskM7w4LLUIEjcgmQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-161",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "198.7.56.228",
+            "port": 123,
+            "public-key": "QI+u918O4tyAtoV37B6HVdiQeZoEUi0dWXhSsC3LiWQ=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-162",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "176.222.34.140",
+            "port": 123,
+            "public-key": "PG6oqmH+m3JPVRBjfkbBlI/72noVZ8KrnSRq7GuGink=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-163",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "37.120.213.164",
+            "port": 123,
+            "public-key": "DxBtB3enAlS3OtJ9+jFtrTmuiGs36aV6HyyjKcit71o=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-164",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "31.7.57.243",
+            "port": 123,
+            "public-key": "nfFRpFZ0ZXWVoz8C4gP5ti7V1snFT1gV8EcIxTWJtB4=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        },
+        {
+            "name": "wg-165",
+            "type": "wireguard",
+            "ip": "100.80.234.177",
+            "private-key": "cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=",
+            "server": "89.187.165.99",
+            "port": 123,
+            "public-key": "A557Tcs9ezMHjMO3QoCox2fgcc9/uR/nOjbw28AKqkg=",
+            "allowed-ips": [
+                "0.0.0.0/0",
+                "::/0"
+            ],
+            "pre-shared-key": "N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=",
+            "mtu": 1280,
+            "udp": true,
+            "amnezia-wg-option": {
+                "jc": "5",
+                "jmin": "50",
+                "jmax": "100"
+            }
+        }
+    ],
+    "proxy-groups": [
+        {
+            "name": "\u2705 Selector",
+            "type": "select",
+            "proxies": [
+                "wg-0",
+                "wg-1",
+                "wg-2",
+                "wg-3",
+                "wg-4",
+                "wg-5",
+                "wg-6",
+                "wg-7",
+                "wg-8",
+                "wg-9",
+                "wg-10",
+                "wg-11",
+                "wg-12",
+                "wg-13",
+                "wg-14",
+                "wg-15",
+                "wg-16",
+                "wg-17",
+                "wg-18",
+                "wg-19",
+                "wg-20",
+                "wg-21",
+                "wg-22",
+                "wg-23",
+                "wg-24",
+                "wg-25",
+                "wg-26",
+                "wg-27",
+                "wg-28",
+                "wg-29",
+                "wg-30",
+                "wg-31",
+                "wg-32",
+                "wg-33",
+                "wg-34",
+                "wg-35",
+                "wg-36",
+                "wg-37",
+                "wg-38",
+                "wg-39",
+                "wg-40",
+                "wg-41",
+                "wg-42",
+                "wg-43",
+                "wg-44",
+                "wg-45",
+                "wg-46",
+                "wg-47",
+                "wg-48",
+                "wg-49",
+                "wg-50",
+                "wg-51",
+                "wg-52",
+                "wg-53",
+                "wg-54",
+                "wg-55",
+                "wg-56",
+                "wg-57",
+                "wg-58",
+                "wg-59",
+                "wg-60",
+                "wg-61",
+                "wg-62",
+                "wg-63",
+                "wg-64",
+                "wg-65",
+                "wg-66",
+                "wg-67",
+                "wg-68",
+                "wg-69",
+                "wg-70",
+                "wg-71",
+                "wg-72",
+                "wg-73",
+                "wg-74",
+                "wg-75",
+                "wg-76",
+                "wg-77",
+                "wg-78",
+                "wg-79",
+                "wg-80",
+                "wg-81",
+                "wg-82",
+                "wg-83",
+                "wg-84",
+                "wg-85",
+                "wg-86",
+                "wg-87",
+                "wg-88",
+                "wg-89",
+                "wg-90",
+                "wg-91",
+                "wg-92",
+                "wg-93",
+                "wg-94",
+                "wg-95",
+                "wg-96",
+                "wg-97",
+                "wg-98",
+                "wg-99",
+                "wg-100",
+                "wg-101",
+                "wg-102",
+                "wg-103",
+                "wg-104",
+                "wg-105",
+                "wg-106",
+                "wg-107",
+                "wg-108",
+                "wg-109",
+                "wg-110",
+                "wg-111",
+                "wg-112",
+                "wg-113",
+                "wg-114",
+                "wg-115",
+                "wg-116",
+                "wg-117",
+                "wg-118",
+                "wg-119",
+                "wg-120",
+                "wg-121",
+                "wg-122",
+                "wg-123",
+                "wg-124",
+                "wg-125",
+                "wg-126",
+                "wg-127",
+                "wg-128",
+                "wg-129",
+                "wg-130",
+                "wg-131",
+                "wg-132",
+                "wg-133",
+                "wg-134",
+                "wg-135",
+                "wg-136",
+                "wg-137",
+                "wg-138",
+                "wg-139",
+                "wg-140",
+                "wg-141",
+                "wg-142",
+                "wg-143",
+                "wg-144",
+                "wg-145",
+                "wg-146",
+                "wg-147",
+                "wg-148",
+                "wg-149",
+                "wg-150",
+                "wg-151",
+                "wg-152",
+                "wg-153",
+                "wg-154",
+                "wg-155",
+                "wg-156",
+                "wg-157",
+                "wg-158",
+                "wg-159",
+                "wg-160",
+                "wg-161",
+                "wg-162",
+                "wg-163",
+                "wg-164",
+                "wg-165"
+            ]
+        }
+    ],
+    "rule-providers": {
+        "malware": {
+            "type": "http",
+            "format": "text",
+            "behavior": "domain",
+            "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.txt",
+            "path": "./ruleset/malware.txt",
+            "interval": 86400
+        },
+        "phishing": {
+            "type": "http",
+            "format": "text",
+            "behavior": "domain",
+            "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.txt",
+            "path": "./ruleset/phishing.txt",
+            "interval": 86400
+        },
+        "cryptominers": {
+            "type": "http",
+            "format": "text",
+            "behavior": "domain",
+            "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt",
+            "path": "./ruleset/cryptominers.txt",
+            "interval": 86400
+        }
+    },
+    "rules": [
+        "RULE-SET,malware,REJECT",
+        "RULE-SET,phishing,REJECT",
+        "RULE-SET,cryptominers,REJECT",
+        "MATCH,\u2705 Selector"
+    ],
+    "ntp": {
+        "enable": true,
+        "server": "time.apple.com",
+        "port": 123,
+        "interval": 30
+    }
+}
