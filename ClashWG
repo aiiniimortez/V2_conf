@@ -3341,8 +3341,12 @@
     ],
     "proxy-groups": [
         {
-            "name": "\u2705 Selector",
-            "type": "select",
+            "name": "✅ Selector",
+            "type": "url-test",
+            "url": "http://cp.cloudflare.com",
+            "interval": 300,
+            "tolerance": 150,
+            "lazy": true,
             "proxies": [
                 "1 AU Adelaide",
                 "2 AU Adelaide",
